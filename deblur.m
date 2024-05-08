@@ -1,10 +1,9 @@
 % Gaussian deblur (works best for square, greyscale images)
 % infile - name of blurry file
-%outfile - name of deblurred output file
-%psfSize - estimated size of Gaussian psf
-%N - number of blind deconvolution iterations
-%thresh - edge detection threshold, used to reduce "ringing" around image
-%edges
+% outfile - name of deblurred output file
+% psfSize - estimated size of Gaussian psf
+% N - number of blind deconvolution iterations
+% thresh - edge detection threshold, used to reduce "ringing" around image edges
 
 
 function X = deblur(infile, outfile, psfSize, N, thresh)
