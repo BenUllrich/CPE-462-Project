@@ -1,3 +1,12 @@
+% Gaussian deblur (works best for square, greyscale images)
+% infile - name of blurry file
+%outfile - name of deblurred output file
+%psfSize - estimated size of Gaussian psf
+%N - number of blind deconvolution iterations
+%thresh - edge detection threshold, used to reduce "ringing" around image
+%edges
+
+
 function X = deblur(infile, outfile, psfSize, N, thresh)
 
 X = imread(infile);
@@ -14,4 +23,4 @@ WEIGHT(:,[1:3 end-(0:2)]) = 0;
 imshow(J)
 title("Deblurred Image")
 
-imwrite(J,outfile,'jpg');
+imwrite(J,outfile+".jpg",'jpg');
