@@ -1,3 +1,6 @@
+
+#MATLAB CODE
+
 function imageresize(image, percentage)
 
 % 0 - 1
