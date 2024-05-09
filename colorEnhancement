@@ -1,0 +1,8 @@
+input_image = imread('IMG.jpg');
+
+%Specify saturation_factor and contrast_factor
+saturation_factor = 1.5;
+contrast_factor = 1.2;
+
+% Conver the image to double precision
+input_image = im2double(input_image);
