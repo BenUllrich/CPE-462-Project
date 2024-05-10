@@ -1,5 +1,5 @@
 % Read the image
-img = imread('C:\Users\alanm\Downloads\dogs.png');
+img = imread(%input file path here%);
 
 % Convert to grayscale if image is RGB
 if ndims(img) == 3
