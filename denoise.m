@@ -7,7 +7,7 @@
 %   - "mean"   - Mean filter
 % filtSize - size of filter used by denoising algorithm 
 
-function X = denoise(infile, outfile, method, filtSize)
+function = denoise(infile, outfile, method, filtSize)
 
 noisy = imread(infile);
 
