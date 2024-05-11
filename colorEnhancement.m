@@ -21,6 +21,11 @@ R = R * saturation_factor;
 G = G * saturation_factor;
 B = B * saturation_factor;
 
+% Enhance contrast by adjusting intensity values
+R = (R - 0.5) * contrast_factor + 0.5;
+G = (G - 0.5) * contrast_factor + 0.5;
+B = (B - 0.5) * contrast_factor + 0.5;
+
 % Clip values outside [0,1]
 R = min(max(R, 0), 1);
 G = min(max(G, 0), 1);
