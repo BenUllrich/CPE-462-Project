@@ -6,7 +6,7 @@
 % thresh - edge detection threshold, used to reduce "ringing" around image edges
 
 
-function X = deblur(infile, outfile, psfSize, N, thresh)
+function deblur(infile, outfile, psfSize, N, thresh)
 
 X = imread(infile);
 PSF = ones(psfSize);
