@@ -2,7 +2,7 @@
 % infile - name of noisy file
 % outfile - name of denoised output file (no extension needed, will output as jpg)
 % saturation_factor - saturation will be multiplied by this value (1 means no change)
-% contrast_factor - ?
+% contrast_factor - this value is used in intensity adjustment calculations
 
 function colorEnhancement(infile, outfile, saturation_factor,contrast_factor)
 
