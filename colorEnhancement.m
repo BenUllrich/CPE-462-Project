@@ -1,3 +1,9 @@
+% Saturation+Contrast adjustment
+% infile - name of noisy file
+% outfile - name of denoised output file (no extension needed, will output as jpg)
+% saturation_factor - saturation will be multiplied by this value (1 means no change)
+% contrast_factor - ?
+
 function colorEnhancement(infile, outfile, saturation_factor,contrast_factor)
 
 input_image = imread(infile);
@@ -33,5 +39,4 @@ title('Original Image');
 subplot(1, 2, 2);
 imshow(enhanced_image);
 title('Enhanced Image');
-
 imwrite(enhanced_image,outfile+".jpg",'jpg');
