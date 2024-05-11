@@ -2,7 +2,7 @@ clear all;
 close all;
 clc;
 
-A = imread('C:\Users\alanm\Downloads\birds.jpg');
+A = imread(%Rgb image file path%);
 B = rgb2gray(A);
 
 %% Wavelet Compression
