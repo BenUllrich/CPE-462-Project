@@ -7,6 +7,9 @@
 %   - "mean"   - Mean filter
 % filtSize - size of filter used by denoising algorithm 
 
+% based partly on example code provided by MathWorks:
+% https://www.mathworks.com/help/images/noise-removal.html
+
 function denoise(infile, outfile, method, filtSize)
 
 noisy = imread(infile);
