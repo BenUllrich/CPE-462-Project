@@ -37,11 +37,6 @@ enhanced_image = cat(3, R, G, B);
 % Convert the output to uint8
 enhanced_image = uint8(255 * enhanced_image);
 
-figure;
-subplot(1, 2, 1);
-imshow(input_image);
-title('Original Image');
-subplot(1, 2, 2);
 imshow(enhanced_image);
 title('Enhanced Image');
 imwrite(enhanced_image,outfile+".jpg",'jpg');
