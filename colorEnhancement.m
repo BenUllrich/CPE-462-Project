@@ -1,8 +1,6 @@
-input_image = imread('IMG.jpg');
+function colorEnhancement(infile, outfile, saturation_factor,contrast_factor)
 
-%Specify saturation_factor and contrast_factor
-saturation_factor = 1.5;
-contrast_factor = 1.2;
+input_image = imread(infile);
 
 % Conver the image to double precision
 input_image = im2double(input_image);
@@ -19,19 +17,21 @@ B = B * saturation_factor;
 
 % Clip values outside [0,1]
 R = min(max(R, 0), 1);
-G = min(max(G, -), 1);
-B = min(max(B, 0), 1;
+G = min(max(G, 0), 1);
+B = min(max(B, 0), 1);
 
 % Combine the enhance color channels
 enhanced_image = cat(3, R, G, B);
 
 % Convert the output to uint8
-enhance_image = iunt8(255 * enhanced_image);
+enhanced_image = uint8(255 * enhanced_image);
 
 figure;
 subplot(1, 2, 1);
 imshow(input_image);
 title('Original Image');
 subplot(1, 2, 2);
-inshow(enhanced_image);
+imshow(enhanced_image);
 title('Enhanced Image');
+
+imwrite(enhanced_image,outfile+".jpg",'jpg');
