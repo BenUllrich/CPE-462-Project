@@ -1,7 +1,7 @@
 clear all;
 close all;
 clc;
-i=imread('C:\Users\alanm\Downloads\bean.jpg');
+i=imread(%image file path%);
 s=size(i);
 r1=input('Enter r1: ');
 r2=input('Enter r2: ');
