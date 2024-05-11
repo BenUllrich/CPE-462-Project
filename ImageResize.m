@@ -1,16 +1,16 @@
+% Image Resizing
+% infile - name of input
+% outfile - name of denoised output file (no extension needed, will output as jpg)
+% percentage - amount to resize the image by (100 means no change)
 
-
-function imageresize(image, percentage)
+function imageResize(infile, outfile, percentage)
 
 % 0 - 1
 p = percentage/100;
-disp(p);
 
 
 % reads the original image
-img = imread(image);
-figure, imshow(img)
-disp(size(img))
+img = imread(infile);
 
 
 % getting the size of original image
@@ -41,6 +41,7 @@ for x = 1:2:rows-1
     j = 1;
     k = 1;
 end
-figure, imshow(resizedimg)
-disp(size(resizedimg))
+imwrite(resizedimg,outfile+".jpg",'jpg');
+imshow(resizedimg)
+title("Resized Image") 
 end
