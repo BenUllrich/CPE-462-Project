@@ -1,6 +1,6 @@
 % Image Resizing
 % infile - name of input
-% outfile - name of denoised output file (no extension needed, will output as jpg)
+% outfile - name of enhanced output file (no extension needed, will output as jpg)
 % r1, r2, alpha_degree,beta_degree,gamma_degree - coefficients+variables in contrast stretching function
 
 
