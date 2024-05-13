@@ -1,14 +1,16 @@
-clear all;
-close all;
-clc;
-i=imread(%image file path%);
+% Image Resizing
+% infile - name of input
+% outfile - name of denoised output file (no extension needed, will output as jpg)
+% r1, r2, alpha_degree,beta_degree,gamma_degree - coefficients+variables in contrast stretching function
+
+
+function contrastStretch(infile, outfile,r1,r2,alpha_degree,beta_degree,gamma_degree)
+
+i=imread(infile);
 s=size(i);
-r1=input('Enter r1: ');
-r2=input('Enter r2: ');
+
 if (r1>=0 && r1<=s(1)-1 && r2>=0 && r2<=s(1)-1 && r1<r2)
-    alpha_degree=input('Enter alpha in degrees: ');
-    beta_degree=input('Enter beta in degrees: ');
-    gamma_degree=input('Enter gamma in degrees: ');
+
     alpha=(alpha_degree*pi)/180;
     beta=(beta_degree*pi)/180;
     gamma=(gamma_degree*pi)/180;
@@ -35,6 +37,7 @@ if (r1>=0 && r1<=s(1)-1 && r2>=0 && r2<=s(1)-1 && r1<r2)
     im3 = floor(a2*r2+(a1-a2)*r1 + (a3*(i-r2)));
     % concatance of output image
 	imageOut = cast(im1+im2+im3,'uint8');
+    imwrite(out,outfile+".jpg",'jpg');
     figure,imshow(i)
     title('Original Image');
 	figure,imshow(imageOut);
