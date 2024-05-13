@@ -1,3 +1,7 @@
+% Image Resizing
+% infile - name of input
+% outfile - name of denoised output file (no extension needed, will output as jpg)
+
 function histogramEqualization(infile, outfile)
 
 input_image = imread(infile);
