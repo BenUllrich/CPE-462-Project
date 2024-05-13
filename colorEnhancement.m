@@ -1,5 +1,5 @@
 % Saturation+Contrast adjustment
-% infile - name of noisy file
+% infile - name of input file
 % outfile - name of enhanced output file (no extension needed, will output as jpg)
 % saturation_factor - saturation will be multiplied by this value (1 means no change)
 % contrast_factor - this value is used in intensity adjustment calculations
