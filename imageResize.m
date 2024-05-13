@@ -1,6 +1,6 @@
 % Image Resizing
 % infile - name of input
-% outfile - name of denoised output file (no extension needed, will output as jpg)
+% outfile - name of resized output file (no extension needed, will output as jpg)
 % percentage - amount to resize the image by (100 means no change)
 
 function imageResize(infile, outfile, percentage)
