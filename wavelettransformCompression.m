@@ -1,8 +1,10 @@
-clear all;
-close all;
-clc;
+% Wavelet Transform
+% infile - name of input file
+% outfile - name of transformed output file (no extension needed, will output as jpg)
 
-A = imread(%Rgb image file path%);
+function colorEnhancement(infile, outfile)
+
+A = imread(infile);
 B = rgb2gray(A);
 
 %% Wavelet Compression
@@ -22,3 +24,4 @@ for keep = [.1 .05 .01 .005]
     title(['', num2str(keep*100),'%'], 'FontSize',12)
     count = count+1;
 end
+imwrite(uint8(Areacon),outfile+".jpg",'jpg');
