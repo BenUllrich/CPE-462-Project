@@ -2,7 +2,7 @@
 % infile - name of input file
 % outfile - name of transformed output file (no extension needed, will output as jpg)
 
-function colorEnhancement(infile, outfile)
+function wavelettransformCompression(infile, outfile)
 
 A = imread(infile);
 B = rgb2gray(A);
